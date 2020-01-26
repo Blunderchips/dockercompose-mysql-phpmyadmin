@@ -9,7 +9,8 @@ services:
       MYSQL_PASSWORD: user
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: default_schema
-
+    volumes:
+      - pma-mysql-volume:/var/lib/mysql
   phpmyadmin:
     image: phpmyadmin/phpmyadmin
     container_name: dev_pma
@@ -22,3 +23,6 @@ services:
     restart: always
     ports:
       - 8183:80
+volumes:
+  pma-mysql-volume:
+

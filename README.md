@@ -8,7 +8,7 @@ Learn more docker compose <a href="https://docs.docker.com/compose/overview/" ta
 
 1. Clone this repository
 ```
-    git clone git@github.com:fuadajip/dockercompose-mysql-phpmyadmin.git
+    git clone git@github.com:xenogenesi/dockercompose-mysql-phpmyadmin.git
 ```
 
 2. Change to directory
@@ -29,6 +29,10 @@ Learn more docker compose <a href="https://docs.docker.com/compose/overview/" ta
 5. Access mysql on terminal
 ```
     docker exec -it mysql_container_name mysql -u root -p
+```
+Databases are made persistent by using the volume 'pma-mysql-volume' to remove them use
+```
+    docker-compose down -v
 ```
 
 ## Docker phpmyadmin ENV
